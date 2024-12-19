@@ -14,6 +14,12 @@ Route::get('lists/categories', [CategoryController::class,  'list']);
 
 Route::get('/subcategories', [SubCategoryController::class,  'index']);
 
+Route::post('/subcategories', [SubCategoryController::class,  'store']);
+
+Route::put('/subcategories/{subcategory}', [SubCategoryController::class,  'update']);
+
+Route::delete('/subcategories/{subcategory}', [SubCategoryController::class,  'destroy']);
+
 Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('categories', CategoryController::class);
 
