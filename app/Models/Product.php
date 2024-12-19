@@ -22,7 +22,7 @@ class Product extends Model
      * muchas categorías y una subcategoría puede pertenecer a muchos productos.
      * @return HasMany
      */
-    public function subcategory(): HasMany{
+    public function subCategory(): HasMany{
         return $this->hasMany(Subcategory::class);
     }
 }
